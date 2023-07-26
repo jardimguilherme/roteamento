@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Planejador de Rotas do Aeroporto</title>
+    <link rel="icon" href="data:,">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Parte de cima da tela -->
+        <div class="row">
+            <!-- Coluna da esquerda (portões disponíveis) -->
+            <div class="col-sm-9">
+                <h4 class="text-center">Portões Disponíveis</h4>
+                <div id="gate-buttons" class="row justify-content-start d-flex flex-wrap"></div>
+                <button id="create-route" class="btn btn-primary btn-lg btn-block">Criar Rota</button>
+            </div>
+            <!-- Coluna da direita (rota sugerida) -->
+            <div class="col-sm-3">
+                <h4 class="text-center">Rota Sugerida</h4>
+                <div id="optimal-route" class="text-center"></div>
+            </div>
+        </div>
+        <!-- Parte de baixo da tela (histórico de rotas) -->
+        <div class="row mt-4"> <!-- Adicionando a classe mt-4 -->
+            <div class="col-sm-12">
+                <h4 class="text-center">Histórico de Rotas</h4>
+                <table id="route-history" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Rota</th>
+                            <th class="text-center">Hora da Criação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="route-history-body">
+                        <!-- As rotas serão inseridas aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
